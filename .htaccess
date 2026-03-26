@@ -1,0 +1,7 @@
+Options -Indexes
+
+# Block direct browser access to internal app layers.
+# These folders are for includes/config only, not public entry points.
+RewriteEngine On
+RewriteRule ^includes/ - [F,L,NC]
+RewriteRule ^config/ - [F,L,NC]

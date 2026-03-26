@@ -1,0 +1,12 @@
+# Local backups and archives
+backups/
+*.zip
+
+# User-uploaded EHR files
+assets/uploads/ehr/*
+!assets/uploads/ehr/.htaccess
+
+# IDE/system noise
+.vscode/
+Thumbs.db
+Desktop.ini
