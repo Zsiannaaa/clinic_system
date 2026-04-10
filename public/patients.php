@@ -175,6 +175,9 @@ require_once '../includes/header.php';
             <div class="card-header-section">
                 <h5><svg data-lucide="users" width="17" height="17"></svg>&nbsp;Patient Registry</h5>
                 <div style="display:flex;align-items:center;gap:10px">
+                    <a href="/clinic_1/public/patients_export.php" class="btn btn-sm btn-outline-secondary" title="Export all patients to Excel">
+                        <svg data-lucide="save"></svg> Export All
+                    </a>
                     <div style="position:relative">
                         <svg data-lucide="search" width="14" height="14" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text-muted);pointer-events:none"></svg>
                         <input type="text" id="patientSearch" placeholder="Search patients..." oninput="filterTable()"
@@ -216,6 +219,9 @@ require_once '../includes/header.php';
                             <td style="text-align:right;white-space:nowrap">
                                 <a href="/clinic_1/public/patient_view.php?id=<?= $patient['id'] ?>" class="btn btn-sm btn-outline-info">
                                     <svg data-lucide="eye"></svg> View
+                                </a>
+                                <a href="/clinic_1/public/patients_export.php?patient_id=<?= $patient['id'] ?>" class="btn btn-sm btn-outline-secondary" title="Export this patient record to Excel">
+                                    <svg data-lucide="save"></svg> Export
                                 </a>
                                 <a href="?edit=<?= $patient['id'] ?>" class="btn btn-sm btn-outline-primary">
                                     <svg data-lucide="pencil"></svg> Edit

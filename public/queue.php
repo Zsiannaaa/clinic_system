@@ -91,6 +91,9 @@ require_once '../includes/header.php';
     <div class="card-header-section">
         <h5><svg data-lucide="calendar-clock" width="17" height="17"></svg>&nbsp;Today&apos;s Queue</h5>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <a href="/clinic_1/public/queue_export.php?filter=<?= urlencode($filter) ?>" class="btn btn-sm btn-outline-secondary">
+                <svg data-lucide="save"></svg> Export
+            </a>
             <?php foreach (['All', 'Waiting', 'In Service', 'Done', 'Skipped'] as $tab): ?>
             <a href="/clinic_1/public/queue.php?filter=<?= urlencode($tab) ?>"
                class="btn btn-sm <?= $filter === $tab ? 'btn-primary' : 'btn-outline-secondary' ?>">

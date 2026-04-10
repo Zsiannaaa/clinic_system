@@ -44,6 +44,13 @@ function getPatientsForDropdown($pdo) {
 }
 
 /**
+ * Fetch all patients (no pagination) for exports/reports.
+ */
+function getAllPatientsForExport($pdo) {
+    return $pdo->query("SELECT * FROM patients ORDER BY last_name ASC, first_name ASC")->fetchAll();
+}
+
+/**
  * Check if a patient has at least one appointment with a specific doctor.
  * Used by the Doctor role to verify they are allowed to view a patient.
  */

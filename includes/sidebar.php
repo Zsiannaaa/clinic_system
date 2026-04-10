@@ -105,6 +105,14 @@ function sidebarActive(string $segment): string {
         </a>
     </li>
 
+    <li class="nav-item">
+        <a href="/clinic_1/public/reports.php"
+           class="nav-link <?= sidebarActive('reports') ?>">
+            <svg data-lucide="file-text" class="nav-icon"></svg>
+            <span class="nav-label">Reports</span>
+        </a>
+    </li>
+
     <?php if ($role === 'admin'): ?>
     <li class="nav-item">
         <a href="/clinic_1/public/users.php"

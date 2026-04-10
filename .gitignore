@@ -10,3 +10,8 @@ assets/uploads/ehr/*
 .vscode/
 Thumbs.db
 Desktop.ini
+
+# Environment files (keep secrets out of git)
+.env
+.env.local
+.env.*.local

@@ -90,6 +90,9 @@ require_once '../includes/header.php';
                         <?php endforeach; ?>
                     </select>
                     <button class="btn btn-outline-secondary btn-sm">Filter</button>
+                    <a href="/clinic_1/public/billing_export.php?status=<?= urlencode($selectedStatus) ?>&patient_id=<?= (int)($selectedPatientId ?? 0) ?>" class="btn btn-sm btn-outline-secondary">
+                        <svg data-lucide="save"></svg> Export
+                    </a>
                 </form>
             </div>
             <div class="table-responsive">
@@ -127,6 +130,7 @@ require_once '../includes/header.php';
                             <td style="text-align:right">
                                 <a href="/clinic_1/public/billing.php?invoice_id=<?= (int)$inv['id'] ?>" class="btn btn-sm btn-outline-primary">Open</a>
                                 <a href="/clinic_1/public/billing_receipt.php?id=<?= (int)$inv['id'] ?>" class="btn btn-sm btn-outline-secondary" target="_blank">Print</a>
+                                <a href="/clinic_1/public/billing_export.php?invoice_id=<?= (int)$inv['id'] ?>" class="btn btn-sm btn-outline-secondary">Export</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

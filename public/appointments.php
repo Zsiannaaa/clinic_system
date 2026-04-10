@@ -162,6 +162,9 @@ require_once '../includes/header.php';
     <div class="card-header-section">
         <h5><svg data-lucide="calendar-check" width="17" height="17"></svg>&nbsp;Appointment Records</h5>
         <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end">
+            <a href="/clinic_1/public/appointments_export.php?status=<?= urlencode($statusFilter) ?>" class="btn btn-sm btn-outline-secondary">
+                <svg data-lucide="save"></svg> Export
+            </a>
             <div class="appointments-filter-tabs">
                 <?php foreach (['All','Scheduled','Completed','Cancelled'] as $tab): ?>
                 <a href="?status=<?= $tab ?>" class="btn btn-sm <?= $statusFilter === $tab ? 'btn-primary' : 'btn-outline-secondary' ?>"><?= $tab ?></a>
